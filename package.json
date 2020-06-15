@@ -38,6 +38,10 @@
 		"preact": "10.x",
 		"preact-render-to-string": "5.x"
 	},
+	"files": [
+		"src/",
+		"jest-preset.js"
+	],
 	"prettier": {
 		"singleQuote": true,
 		"trailingComma": "all",
