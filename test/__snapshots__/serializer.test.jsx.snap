@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`serializer should class components 1`] = `  <div></div>`;
+
+exports[`serializer should serialize nested component 1`] = `
+  <div>
+    <div>Bar</div>
+    foo
+  </div>
+`;
+
+exports[`serializer should serialize simple component 1`] = `  <div>foo</div>`;

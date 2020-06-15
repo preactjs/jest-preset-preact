@@ -32,6 +32,9 @@ module.exports = {
 		'^.+\\.(css|sass|scss|less)$',
 	],
 
+	// Serialize Preact VNodes to strings for `toMatchSnapshot()`
+	snapshotSerializers: [path.resolve(__dirname, 'serializer')],
+
 	// Display dynamice preview of matched files during watch mode
 	watchPlugins: [
 		'jest-watch-typeahead/filename',
