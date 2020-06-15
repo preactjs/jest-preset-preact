@@ -1,0 +1,34 @@
+const preact = require('preact');
+const path = require('path');
+
+const isVersion10 = preact.Fragment !== undefined;
+const compat = isVersion10 ? 'preact/compat' : 'preact-compat';
+
+const mappedModules = {
+	'^react-dom$': compat,
+	'^react$': compat,
+	// Noop style files
+	'^.+\\.(css|sass|scss|less)$': 'identity-obj-proxy',
+};
+
+if (isVersion10) {
+	mappedModules['^react-dom/test-utils$'] = 'preact/test-utils';
+}
+
+module.exports = {
+	setupFiles: [path.resolve(__dirname, 'polyfills.js')],
+
+	collectCoverageFrom: ['src/**/*.{mjs,js,jsx,ts,tsx}', '!src/**/*.d.ts'],
+
+	// Aliasing
+	moduleNameMapper: mappedModules,
+
+	// Transpiling
+	transform: {
+		'^.+\\.(mjs|js|jsx|ts|tsx)$': path.resolve(__dirname, 'babel.js'),
+	},
+	transformIgnorePatterns: [
+		'[/\\\\]node_modules[/\\\\].+\\.(mjs|js|jsx|ts|tsx)$',
+		'^.+\\.(css|sass|scss|less)$',
+	],
+};
