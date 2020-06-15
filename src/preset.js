@@ -31,4 +31,10 @@ module.exports = {
 		'[/\\\\]node_modules[/\\\\].+\\.(mjs|js|jsx|ts|tsx)$',
 		'^.+\\.(css|sass|scss|less)$',
 	],
+
+	// Display dynamice preview of matched files during watch mode
+	watchPlugins: [
+		'jest-watch-typeahead/filename',
+		'jest-watch-typeahead/testname',
+	],
 };
