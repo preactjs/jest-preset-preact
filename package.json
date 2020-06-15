@@ -1,0 +1,74 @@
+{
+	"name": "jest-preset-preact",
+	"version": "4.0.0",
+	"description": "Jest preset for Preact app",
+	"main": "src/preset.js",
+	"author": "Preact Authors <core@preactjs.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/preactjs/jest-preset-preact.git"
+	},
+	"bugs": {
+		"url": "https://github.com/preactjs/jest-preset-preact/issues"
+	},
+	"scripts": {
+		"test": "eslint '**/*.{js,jsx}' && jest"
+	},
+	"dependencies": {
+		"identity-obj-proxy": "^3.0.0",
+		"isomorphic-unfetch": "^3.0.0",
+		"jest-watch-typeahead": "^0.6.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.10.2",
+		"@babel/plugin-transform-react-jsx": "^7.10.1",
+		"@babel/preset-env": "^7.10.2",
+		"@types/jest": "^26.0.0",
+		"eslint": "^7.2.0",
+		"husky": "^4.2.5",
+		"jest": "^26.0.1",
+		"lint-staged": "^10.2.10",
+		"preact": "10.4.4",
+		"preact-render-to-string": "5.1.9",
+		"prettier": "^2.0.5"
+	},
+	"peerDependencies": {
+		"jest": "26.x",
+		"preact": "10.x",
+		"preact-render-to-string": "5.x"
+	},
+	"prettier": {
+		"singleQuote": true,
+		"trailingComma": "all",
+		"useTabs": true,
+		"tabWidth": 2,
+		"arrowParens": "avoid"
+	},
+	"lint-staged": {
+		"**/*.{js,ts,tsx}": [
+			"prettier --write"
+		]
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"jest": {
+		"preset": "./src/preset.js"
+	},
+	"eslintConfig": {
+		"env": {
+			"node": true,
+			"jest": true
+		},
+		"parserOptions": {
+			"sourceType": "module",
+			"ecmaVersion": 2020,
+			"ecmaFeatures": {
+				"jsx": true
+			}
+		}
+	}
+}
