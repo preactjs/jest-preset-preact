@@ -10,6 +10,7 @@ module.exports = babelJest.createTransformer({
 				pragmaFrag: 'Fragment',
 			},
 		],
+		'@babel/plugin-proposal-class-properties',
 	],
 	babelrc: false,
 	configFile: false,

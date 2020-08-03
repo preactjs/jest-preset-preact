@@ -35,4 +35,19 @@ describe('preset', () => {
 		render(<div class={style.root}>foo</div>, div);
 		expect(div.firstChild.className).toEqual('root');
 	});
+
+	it('should support class properties', () => {
+		class App extends React.Component {
+			state = {
+				foo: 'foo',
+			};
+			render() {
+				return <h1>{this.state.foo}</h1>;
+			}
+		}
+
+		const div = document.createElement('div');
+		ReactDOM.render(<App />, div);
+		expect(div.textContent).toEqual('foo');
+	});
 });
