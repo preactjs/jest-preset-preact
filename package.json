@@ -1,6 +1,6 @@
 {
 	"name": "jest-preset-preact",
-	"version": "4.0.1",
+	"version": "4.0.2",
 	"description": "Jest preset for testing Preact apps",
 	"main": "src/preset.js",
 	"author": "Preact Authors <core@preactjs.com>",
