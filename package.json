@@ -13,7 +13,7 @@
 		"url": "https://github.com/preactjs/jest-preset-preact/issues"
 	},
 	"scripts": {
-		"test": "eslint '**/*.{js,jsx}' && jest"
+		"test": "eslint \"**/*.{js,jsx}\" && jest"
 	},
 	"dependencies": {
 		"@babel/core": "^7.10.2",
@@ -29,13 +29,13 @@
 	"devDependencies": {
 		"@types/jest": "^26.0.0",
 		"babel-eslint": "^10.1.0",
-		"eslint": "^7.2.0",
+		"eslint": "^7.16.0",
 		"husky": "^4.2.5",
-		"jest": "^26.0.1",
+		"jest": "^26.6.3",
 		"lint-staged": "^10.2.10",
 		"preact": "10.4.4",
 		"preact-render-to-string": "5.1.9",
-		"prettier": "^2.0.5"
+		"prettier": "^2.2.1"
 	},
 	"peerDependencies": {
 		"jest": "26.x",
