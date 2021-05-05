@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { h, render } from 'preact';
+import { h, Fragment, render } from 'preact';
 import style from './foo.less';
 
 describe('preset', () => {
@@ -34,6 +34,12 @@ describe('preset', () => {
 		const div = document.createElement('div');
 		render(<div class={style.root}>foo</div>, div);
 		expect(div.firstChild.className).toEqual('root');
+	});
+
+	it('should support Fragments', () => {
+		const div = document.createElement('div');
+		render(<>foo</>, div);
+		expect(div.textContent).toEqual('foo');
 	});
 
 	it('should support class properties', () => {
