@@ -1,4 +1,4 @@
-import { h, Component } from 'preact';
+import { Component } from 'preact';
 
 describe('serializer', () => {
 	it('should serialize simple component', () => {

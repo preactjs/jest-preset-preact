@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { h, Fragment, render } from 'preact';
+import { render } from 'preact';
 import style from './foo.less';
 
 describe('preset', () => {

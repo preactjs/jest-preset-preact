@@ -1,4 +1,4 @@
-import { Fragment, FunctionalComponent } from 'preact';
+import { h, Fragment, FunctionalComponent } from 'preact';
 
 describe('serializer', () => {
 	it('should serialize simple component', () => {

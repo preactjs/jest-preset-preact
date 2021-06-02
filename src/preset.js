@@ -40,4 +40,7 @@ module.exports = {
 		'jest-watch-typeahead/filename',
 		'jest-watch-typeahead/testname',
 	],
+
+	// Set default test environment to jsdom
+	testEnvironment: 'jsdom',
 };

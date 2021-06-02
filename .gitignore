@@ -77,3 +77,6 @@ test-e2e/screenshots
 # Browser profiles
 profiles/firefox/*
 profiles/chrome/*
+
+# IntelliJ IDE
+.idea/
