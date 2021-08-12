@@ -38,7 +38,7 @@
 		"prettier": "^2.2.1"
 	},
 	"peerDependencies": {
-		"jest": "26.x",
+		"jest": "26.x || 27.x",
 		"preact": "10.x",
 		"preact-render-to-string": "5.x"
 	},
