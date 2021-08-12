@@ -5,6 +5,7 @@ const isVersion10 = preact.Fragment !== undefined;
 const compat = isVersion10 ? 'preact/compat' : 'preact-compat';
 
 const mappedModules = {
+	'^react/jsx-runtime$': 'preact/jsx-runtime',
 	'^react-dom$': compat,
 	'^react$': compat,
 	// Noop style files
