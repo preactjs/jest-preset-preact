@@ -16,29 +16,30 @@
 		"test": "eslint \"**/*.{js,jsx}\" && jest"
 	},
 	"dependencies": {
-		"@babel/core": "^7.15.0",
-		"@babel/plugin-proposal-class-properties": "^7.14.5",
-		"@babel/plugin-transform-react-jsx": "^7.14.9",
-		"@babel/preset-env": "^7.15.0",
-		"@babel/preset-typescript": "^7.15.0",
-		"babel-jest": "^27.0.6",
+		"@babel/core": "^7.18.2",
+		"@babel/plugin-proposal-class-properties": "^7.17.12",
+		"@babel/plugin-transform-react-jsx": "^7.17.12",
+		"@babel/preset-env": "^7.18.2",
+		"@babel/preset-typescript": "^7.17.12",
+		"babel-jest": "^28.1.0",
 		"identity-obj-proxy": "^3.0.0",
 		"isomorphic-unfetch": "^3.1.0",
-		"jest-watch-typeahead": "^0.6.4"
+		"jest-watch-typeahead": "^1.1.0"
 	},
 	"devDependencies": {
-		"@types/jest": "^27.0.0",
-		"babel-eslint": "^10.1.0",
-		"eslint": "^7.16.0",
-		"husky": "^4.2.5",
-		"jest": "^27.0.6",
-		"lint-staged": "^10.2.10",
-		"preact": "10.4.4",
-		"preact-render-to-string": "5.1.9",
-		"prettier": "^2.2.1"
+		"@babel/eslint-parser": "^7.18.2",
+		"@types/jest": "^28.1.0",
+		"eslint": "^8.16.0",
+		"husky": "^8.0.1",
+		"jest": "^28.1.0",
+		"jest-environment-jsdom": "^28.1.0",
+		"lint-staged": "^13.0.0",
+		"preact": "10.7.3",
+		"preact-render-to-string": "5.2.0",
+		"prettier": "^2.6.2"
 	},
 	"peerDependencies": {
-		"jest": "26.x || 27.x",
+		"jest": "27.x || 28.x",
 		"preact": "10.x",
 		"preact-render-to-string": "5.x"
 	},
@@ -64,14 +65,15 @@
 		}
 	},
 	"jest": {
-		"preset": "./src/preset.js"
+		"preset": "./src/preset.js",
+		"transformIgnorePatterns": []
 	},
 	"eslintConfig": {
 		"env": {
 			"node": true,
 			"jest": true
 		},
-		"parser": "babel-eslint",
+		"parser": "@babel/eslint-parser",
 		"parserOptions": {
 			"sourceType": "module",
 			"ecmaVersion": 2020,
