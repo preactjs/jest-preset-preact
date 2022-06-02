@@ -1,4 +1,3 @@
-const { join } = require('path');
 const babelJest = require('babel-jest');
 
 module.exports = babelJest.default.createTransformer({
