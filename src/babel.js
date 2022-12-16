@@ -15,8 +15,7 @@ module.exports = babelJest.default.createTransformer({
 		[
 			'@babel/plugin-transform-react-jsx',
 			{
-				pragma: 'h',
-				pragmaFrag: 'Fragment',
+				runtime: 'automatic'
 			},
 		],
 		'@babel/plugin-proposal-class-properties',
