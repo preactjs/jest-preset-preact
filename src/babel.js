@@ -15,7 +15,8 @@ module.exports = babelJest.default.createTransformer({
 		[
 			'@babel/plugin-transform-react-jsx',
 			{
-				runtime: 'automatic'
+				runtime: 'automatic',
+				importSource: 'preact'
 			},
 		],
 		'@babel/plugin-proposal-class-properties',
