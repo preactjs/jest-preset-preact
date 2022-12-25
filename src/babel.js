@@ -3,9 +3,7 @@ const babel = require('@babel/core');
 
 // Use config file if present.
 const config = babel.loadPartialConfig();
-const options = config.files.size
-	? config.options
-	: {
+const options = {
 		presets: [
 			[
 				'@babel/preset-typescript',
@@ -28,6 +26,11 @@ const options = config.files.size
 		],
 		babelrc: false,
 		configFile: false,
+		overrides: config.files.size
+		? [
+			config.options,
+		]
+		: [],
 	};
 
 module.exports = {
