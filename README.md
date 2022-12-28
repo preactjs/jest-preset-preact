@@ -5,7 +5,7 @@ Jest preset containing all required configuration for writing tests for [preact]
 Features:
 
 - Transpiles JSX to `h()`
-- Aaliases for `"react"` imports to point to `preact/compat`
+- Aliases for `react` imports to point to `preact/compat`
 - Automatically serialize Preact `VNodes` in snapshots
 - Stub style imports (`.css`, `.less`, `.sass/scss`, etc)
 - Add typeahead preview for filtering in jest's watch mode
@@ -28,6 +28,29 @@ module.exports = {
 	preset: 'jest-preset-preact',
 };
 ```
+
+You can override the default Babel config by providing your own Babel config file:
+
+```js
+// babel.config.js
+module.exports = {
+  env: {
+    test: {
+      plugins: [
+        [
+          "@babel/plugin-transform-react-jsx",
+          {
+            runtime: "automatic",
+            importSource: "preact"
+          }
+        ]
+      ]
+    }
+  }
+}
+```
+
+This, for example, would enable the runtime JSX transform instead of the classic.
 
 ## License
 
