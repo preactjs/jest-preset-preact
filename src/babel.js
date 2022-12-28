@@ -3,7 +3,8 @@ const babel = require('@babel/core');
 
 // Use config file if present.
 const config = babel.loadPartialConfig();
-const options = {
+
+module.exports = babelJest.default.createTransformer({
 	presets: [
 		[
 			'@babel/preset-typescript',
@@ -27,9 +28,4 @@ const options = {
 	babelrc: false,
 	configFile: false,
 	overrides: config.files.size ? [config.options] : [],
-};
-
-module.exports = {
-	...babelJest.default,
-	createTransformer: () => babelJest.default.createTransformer(options),
-};
+});
