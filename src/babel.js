@@ -4,34 +4,30 @@ const babel = require('@babel/core');
 // Use config file if present.
 const config = babel.loadPartialConfig();
 const options = {
-		presets: [
-			[
-				'@babel/preset-typescript',
-				{
-					jsxPragma: 'h',
-					jsxPragmaFrag: 'Fragment',
-				},
-			],
-			'@babel/preset-env',
+	presets: [
+		[
+			'@babel/preset-typescript',
+			{
+				jsxPragma: 'h',
+				jsxPragmaFrag: 'Fragment',
+			},
 		],
-		plugins: [
-			[
-				'@babel/plugin-transform-react-jsx',
-				{
-					pragma: 'h',
-					pragmaFrag: 'Fragment',
-				},
-			],
-			'@babel/plugin-proposal-class-properties',
+		'@babel/preset-env',
+	],
+	plugins: [
+		[
+			'@babel/plugin-transform-react-jsx',
+			{
+				pragma: 'h',
+				pragmaFrag: 'Fragment',
+			},
 		],
-		babelrc: false,
-		configFile: false,
-		overrides: config.files.size
-		? [
-			config.options,
-		]
-		: [],
-	};
+		'@babel/plugin-proposal-class-properties',
+	],
+	babelrc: false,
+	configFile: false,
+	overrides: config.files.size ? [config.options] : [],
+};
 
 module.exports = {
 	...babelJest.default,
