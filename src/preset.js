@@ -46,6 +46,7 @@ module.exports = {
 	testEnvironment: 'jsdom',
 
 	// Load node build, not the browser build
+	// https://github.com/preactjs/preact/pull/3634#discussion_r930171882
 	testEnvironmentOptions: {
 		customExportConditions: [
 			"node",
