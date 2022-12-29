@@ -44,4 +44,12 @@ module.exports = {
 
 	// Default is "node", but we need browser APIs
 	testEnvironment: 'jsdom',
+
+	// Load node exports (CommonJS)
+	testEnvironmentOptions: {
+		customExportConditions: [
+			"node",
+			"node-addons"
+		]
+	},
 };

@@ -1,4 +1,4 @@
-const { render } = require('preact-render-to-string/jsx');
+const render = require('preact-render-to-string/jsx');
 
 module.exports = {
 	test(value) {
