@@ -1,4 +1,8 @@
 const babelJest = require('babel-jest');
+const babel = require('@babel/core');
+
+// Use config file if present.
+const config = babel.loadPartialConfig();
 
 module.exports = babelJest.default.createTransformer({
 	presets: [
@@ -23,4 +27,5 @@ module.exports = babelJest.default.createTransformer({
 	],
 	babelrc: false,
 	configFile: false,
+	overrides: config.files.size ? [config.options] : [],
 });
