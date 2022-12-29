@@ -1,4 +1,4 @@
-const render = require('preact-render-to-string/jsx');
+const renderToString = require('preact-render-to-string/jsx');
 
 module.exports = {
 	test(value) {
@@ -7,7 +7,7 @@ module.exports = {
 		);
 	},
 	print(value, serialize, indent) {
-		const result = render(value);
+		const result = renderToString(value);
 		return indent(result);
 	},
 };
