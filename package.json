@@ -65,10 +65,7 @@
 		}
 	},
 	"jest": {
-		"preset": "./src/preset.js",
-		"transformIgnorePatterns": [
-			"/node_modules/(?!preact/|preact-render-to-string/)"
-		]
+		"preset": "./src/preset.js"
 	},
 	"eslintConfig": {
 		"env": {
