@@ -24,6 +24,7 @@
 		"babel-jest": "^29.3.1",
 		"identity-obj-proxy": "^3.0.0",
 		"isomorphic-unfetch": "^3.1.0",
+		"jest-environment-jsdom": "^29.3.1",
 		"jest-watch-typeahead": "^2.2.1"
 	},
 	"devDependencies": {
@@ -32,7 +33,6 @@
 		"eslint": "^8.30.0",
 		"husky": "^8.0.2",
 		"jest": "^29.3.1",
-		"jest-environment-jsdom": "^29.3.1",
 		"lint-staged": "^13.1.0",
 		"preact": "10.11.3",
 		"preact-render-to-string": "5.2.6",
