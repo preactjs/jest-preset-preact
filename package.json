@@ -1,6 +1,6 @@
 {
 	"name": "jest-preset-preact",
-	"version": "4.0.5",
+	"version": "4.1.0",
 	"description": "Jest preset for testing Preact apps",
 	"main": "src/preset.js",
 	"author": "Preact Authors <core@preactjs.com>",
@@ -81,7 +81,9 @@
 			},
 			"babelOptions": {
 				"parserOpts": {
-					"plugins": ["jsx"]
+					"plugins": [
+						"jsx"
+					]
 				}
 			},
 			"requireConfigFile": false
