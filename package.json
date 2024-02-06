@@ -41,7 +41,7 @@
 	"peerDependencies": {
 		"jest": "27.x || 28.x || 29.x",
 		"preact": "10.x",
-		"preact-render-to-string": "5.x"
+		"preact-render-to-string": "5.x || 6.x"
 	},
 	"files": [
 		"src/",
